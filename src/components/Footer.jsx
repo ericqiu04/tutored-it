@@ -46,9 +46,9 @@ export default function Footer() {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Text>© 2023 Tutoredit.</Text>
+        <Text>© {new Date().getFullYear()} Tutoredit.</Text>
         <Stack direction={'row'} spacing={6}>
-          <ContactIcons icon={<BsWechat />} label={'Wechatr'} href={'#'}></ContactIcons>
+          <ContactIcons icon={<BsWechat />} label={'Wechat'} href={'#'}></ContactIcons>
           <ContactIcons icon={<FaInstagram />} label={'Instagram'} href={'#'}></ContactIcons>
           <ContactIcons icon={<FaDiscord />}label={'Discord'} href={'#'}></ContactIcons>
         </Stack>

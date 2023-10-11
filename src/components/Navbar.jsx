@@ -48,15 +48,15 @@ export default function Navbar() {
 
         <HStack>
           <Box p = "2">
-            <NavLink name = "Home"></NavLink>
+            <NavLink name = "Home" href="/"></NavLink>
           </Box>
 
           <Box p="2">
-            <NavLink name = "Staff"></NavLink>
+            <NavLink name = "Staff" href="staff"></NavLink>
           </Box>
 
           <Box p="2">
-          <NavLink name = "Class Photos"></NavLink>
+          <NavLink name = "Class Photos" href="classes"></NavLink>
           </Box>
         </HStack>
 

@@ -32,7 +32,7 @@ export default function Intro() {
             </Text>
           </Heading>
           <Text fontSize={{ base: 'md', lg: '1.25em' }} color={'gray.600'}>
-          Here at Tutoredit, we offer tutoring programs designed to inspire curiosity, foster creativity, and cultivate confidence in students of all ages and grade levels. With a team of dedicated and experienced tutors, we provide comprehensive support in a wide range of subjects, ensuring that every student receives the attention and guidance they need to succeed.
+          Here at Tutoredit, we offer free tutoring programs designed to foster creativity, and cultivate confidence in students of all ages and grade levels. With a team of dedicated and experienced tutors, we provide comprehensive support in a wide range of subjects, ensuring that every student receives the attention and guidance they need to succeed.
           </Text>
         </Stack>
       </Flex>

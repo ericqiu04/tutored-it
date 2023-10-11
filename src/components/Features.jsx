@@ -1,9 +1,15 @@
 import { Box, SimpleGrid, Icon, Text, Stack, Flex} from '@chakra-ui/react'
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
 
-const Feature = (props) => {
+const Card = (props) => {
   return (
-    <Stack>
+    <Stack
+      p = {10}
+      w={'full'}
+      borderWidth="1px"
+      borderRadius="lg"
+      bg = {'white'}
+      overflow="hidden">
       <Flex
         w={16}
         h={16}
@@ -23,23 +29,23 @@ const Feature = (props) => {
 
 export default function Features() {
   return (
-    <Box backgroundColor="gray.50" p={'12%'}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={20}>
-        <Feature
+    <Box backgroundColor="gray.50" px={'10em'} py={'15%'}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={'5em'}>
+        <Card
           icon={<Icon as={FcAssistant} w={10} h={10} />}
           title={'Meet Your Tutor'}
           text={
             'Our courses offer a learning experience designed to cater to every individual. We offer flexible hours and our tutors are always here to support you when you need it the most.'
           }
         />
-        <Feature
+        <Card
           icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={'Unlimited Donations'}
+          title={'Andrew Su'}
           text={
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
           }
         />
-        <Feature
+        <Card
           icon={<Icon as={FcInTransit} w={10} h={10} />}
           title={'Instant Delivery'}
           text={
