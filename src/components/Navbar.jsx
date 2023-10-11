@@ -12,7 +12,7 @@ const NavLink = (props) => {
       color = {useColorModeValue('gray.600', 'gray.200')}
       _hover={{
         textDecoration: 'none',
-        color: useColorModeValue('gray.800', 'white'),
+        color: useColorModeValue('gray.900', 'white'),
       }}
       href = {props.href}
       >
@@ -36,7 +36,7 @@ export default function Navbar() {
         borderBottomColor="gray.200"
         justify="space-between"
         backgroundColor="rgba(255, 255, 255, 0.7)"
-        backdropFilter="saturate(180%) blur(6px)"
+        backdropFilter="saturate(180%) blur(5px)"
       >
         <HStack>
           <Box>
