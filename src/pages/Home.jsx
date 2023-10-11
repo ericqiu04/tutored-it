@@ -5,8 +5,7 @@ import Footer from '../components/Footer'
 import { Divider } from '@chakra-ui/react'
 
 export default function Home() {
-
-  return (
+  return (  
     <>
       <Navbar />
       <Intro />
@@ -16,4 +15,3 @@ export default function Home() {
     </>
   )
 }
-

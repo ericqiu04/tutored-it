@@ -11,23 +11,11 @@ export default function Intro() {
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text
+            <Text id = "title"
               fontSize={{base: 'md', lg: '1em' }}
               as={'span'}
               zIndex={-1}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: '122%',
-                transform: 'rotate(-2deg)',
-                borderRadius: '35% 25% 20% 29%',
-                height: useBreakpointValue({ base: '40%', md: '120%' }),
-                position: 'absolute',
-                bottom: '-12%',
-                left: '-8%',
-                bg: 'yellow.200',
-                zIndex: -1,
-              }}>
+              position={'relative'}>
               Our Mission
             </Text>
           </Heading>
