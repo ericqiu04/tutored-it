@@ -1,9 +1,12 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex} from '@chakra-ui/react'
+import { Box, SimpleGrid, Icon, Text, Stack, Flex, useColorModeValue} from '@chakra-ui/react'
 import {FaChalkboardTeacher, FaClock, FaMoneyCheckAlt} from 'react-icons/fa'
+import { useRef, forwardRef } from 'react';
+import { annotate } from 'rough-notation'
 
-const Card = (props) => {
+const Card = forwardRef((props, ref) => {
   return (
     <Stack
+      className = "randomName"
       p = {10}
       w={'full'}
       borderWidth="1px"
@@ -20,17 +23,35 @@ const Card = (props) => {
         mb={1}>
         {props.icon}
       </Flex>
-      <Text id = "subtitle" fontWeight={600}>{props.title}</Text>
+      <Text ref = {ref} id = "subtitle" fontWeight={600}>{props.title}</Text>
       <Text color={'gray.600'}>{props.text}</Text>
     </Stack>
   )
-}
+});
 
 export default function Features() {
+
+  const underline = useRef(null);
+
+  function alertingsomeone() {
+    alert("BROOOOO");
+  }
+
+  function anno() {
+    console.log("balli")
+    const underlined = annotate(underline.current, { type: 'underline', color: "yellow"});
+    underlined.show();
+  }
+
   return (
-    <Box backgroundColor="gray.50" px={'10em'} py={'12%'}>
+    <Box 
+    onLoad = {alertingsomeone}
+    backgroundColor="gray.50" 
+    px={'10em'} 
+    py={'12%'}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={'5em'}>
         <Card
+          ref = {underline}
           icon={<Icon as={FaChalkboardTeacher} w={10} h={10} />}
           title={'Meet Your Tutor'}
           text={

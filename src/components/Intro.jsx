@@ -1,8 +1,20 @@
-import {Flex, Heading, Image, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import {Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { useRef } from 'react';
+import { annotate } from 'rough-notation';
 
 export default function Intro() {
+
+  const circled = useRef(null);
+
+  function anno() {
+    console.log("balling")
+    const circling = annotate(circled.current, { type: 'box', color: "yellow", padding: 10 });
+    circling.show();
+  }
+
   return (
     <Stack 
+    onLoad={anno}
     minH={'100vh'} 
     direction={{ base: 'column', md: 'row' }}
     borderBottom="1px" 
@@ -11,13 +23,15 @@ export default function Intro() {
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text id = "title"
+            <Text
+              ref={circled}
+              className = {"randomName"}
               fontSize={{base: 'md', lg: '1em' }}
               as={'span'}
               zIndex={-1}
               position={'relative'}>
-              Our Mission
-            </Text>
+                Our Mission
+              </Text>
           </Heading>
           <Text fontSize={{ base: 'md', lg: '1.25em' }} color={'gray.600'}>
           Here at Tutoredit, we offer free tutoring programs designed to foster creativity, and cultivate confidence in students of all ages and grade levels. With a team of dedicated and experienced tutors, we provide comprehensive support in a wide range of subjects, ensuring that every student receives the attention and guidance they need to succeed.
