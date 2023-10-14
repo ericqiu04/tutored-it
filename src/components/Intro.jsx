@@ -7,10 +7,12 @@ export default function Intro() {
   const circled = useRef(null);
 
   function anno() {
-    console.log("balling")
+    console.log("hi")
     const circling = annotate(circled.current, { type: 'box', color: "yellow", padding: 10 });
     circling.show();
   }
+
+  console.log(circled)
 
   return (
     <Stack 
@@ -25,7 +27,6 @@ export default function Intro() {
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
             <Text
               ref={circled}
-              className = {"randomName"}
               fontSize={{base: 'md', lg: '1em' }}
               as={'span'}
               zIndex={-1}

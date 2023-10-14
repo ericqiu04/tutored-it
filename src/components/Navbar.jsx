@@ -64,7 +64,8 @@ export default function Navbar() {
           <Button
           size = "sm"
           variant = "outline"
-          colorScheme='yellow'
+          color={'blackAlpha.800'}
+          colorScheme='blackAlpha'
           >
           Contact Us
           </Button>

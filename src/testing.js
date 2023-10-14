@@ -1,5 +1,8 @@
 import { annotate } from "rough-notation"
 
+//redundant for now
+
+/*
 console.log("h")
   document.addEventListener('DOMContentLoaded', function() {
     console.log("workign?")
@@ -11,3 +14,4 @@ console.log("h")
     console.log("HIIII");
     console.log(brotha.item(0));
   });
+*/

@@ -1,12 +1,9 @@
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, useColorModeValue} from '@chakra-ui/react'
 import {FaChalkboardTeacher, FaClock, FaMoneyCheckAlt} from 'react-icons/fa'
-import { useRef, forwardRef } from 'react';
-import { annotate } from 'rough-notation'
 
 const Card = forwardRef((props, ref) => {
   return (
     <Stack
-      className = "randomName"
       p = {10}
       w={'full'}
       borderWidth="1px"
@@ -23,7 +20,7 @@ const Card = forwardRef((props, ref) => {
         mb={1}>
         {props.icon}
       </Flex>
-      <Text ref = {ref} id = "subtitle" fontWeight={600}>{props.title}</Text>
+      <Text fontWeight={600}>{props.title}</Text>
       <Text color={'gray.600'}>{props.text}</Text>
     </Stack>
   )
@@ -31,48 +28,34 @@ const Card = forwardRef((props, ref) => {
 
 export default function Features() {
 
-  const underline = useRef(null);
-
-  function alertingsomeone() {
-    alert("BROOOOO");
-  }
-
-  function anno() {
-    console.log("balli")
-    const underlined = annotate(underline.current, { type: 'underline', color: "yellow"});
-    underlined.show();
-  }
-
   return (
-    <Box 
-    onLoad = {alertingsomeone}
-    backgroundColor="gray.50" 
-    px={'10em'} 
-    py={'12%'}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={'5em'}>
-        <Card
-          ref = {underline}
-          icon={<Icon as={FaChalkboardTeacher} w={10} h={10} />}
-          title={'Meet Your Tutor'}
-          text={
-            'Our courses offer a learning experience designed to cater to every individual. We have qualified and experienced tutors who specialize in various subjects and grade levels.'
-          }
-        />
-        <Card
-          icon={<Icon as={FaClock} w={10} h={10} />}
-          title={'Andrew Su'}
-          text={
-            'Tutors have convenient scheduling options allowing students to book sessions at their preferred time. They will also offer assistance with homework, assignments, and projects across various subjects.'
-          }
-        />
-        <Card
-          icon={<Icon as={FaMoneyCheckAlt} w={10} h={10} />}
-          title={'Austina will suck ur balli'}
-          text={
-            'Blah Blah Blah does not cost money or smth. Keep typing smth random for now.'
-          }
-        />
-      </SimpleGrid>
-    </Box>
+      <Box 
+        backgroundColor="gray.50" 
+        px={'10em'} 
+        py={'12%'}>
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={'5em'}>
+            <Card
+              icon={<Icon as={FaChalkboardTeacher} w={10} h={10} />}
+              title={'Meet Your Tutor'}
+              text={
+                'Our courses offer a learning experience designed to cater to every individual. We have qualified and experienced tutors who specialize in various subjects and grade levels.'
+              }
+            />
+            <Card
+              icon={<Icon as={FaClock} w={10} h={10} />}
+              title={'Andrew Su'}
+              text={
+                'Tutors have convenient scheduling options allowing students to book sessions at their preferred time. They will also offer assistance with homework, assignments, and projects across various subjects.'
+              }
+            />
+            <Card
+              icon={<Icon as={FaMoneyCheckAlt} w={10} h={10} />}
+              title={'Austina will suck ur balli'}
+              text={
+                'Blah Blah Blah does not cost money or smth. Keep typing smth random for now.'
+              }
+            />
+          </SimpleGrid>
+      </Box>
   )
 }
