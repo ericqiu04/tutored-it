@@ -1,7 +1,7 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex, useColorModeValue} from '@chakra-ui/react'
+import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
 import {FaChalkboardTeacher, FaClock, FaMoneyCheckAlt} from 'react-icons/fa'
 
-const Card = forwardRef((props, ref) => {
+const Card = (props) => {
   return (
     <Stack
       p = {10}
@@ -24,10 +24,9 @@ const Card = forwardRef((props, ref) => {
       <Text color={'gray.600'}>{props.text}</Text>
     </Stack>
   )
-});
+};
 
 export default function Features() {
-
   return (
       <Box 
         backgroundColor="gray.50" 

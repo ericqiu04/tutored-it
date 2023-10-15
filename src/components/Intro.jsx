@@ -4,15 +4,12 @@ import { annotate } from 'rough-notation';
 
 export default function Intro() {
 
-  const circled = useRef(null);
+  const box = useRef(null);
 
   function anno() {
-    console.log("hi")
-    const circling = annotate(circled.current, { type: 'box', color: "yellow", padding: 10 });
-    circling.show();
+    const boxed = annotate(box.current, { type: 'box', color: 'yellow', padding: 10, animationDuration: '1600' });
+    boxed.show();
   }
-
-  console.log(circled)
 
   return (
     <Stack 
@@ -26,7 +23,7 @@ export default function Intro() {
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
             <Text
-              ref={circled}
+              ref={box}
               fontSize={{base: 'md', lg: '1em' }}
               as={'span'}
               zIndex={-1}
