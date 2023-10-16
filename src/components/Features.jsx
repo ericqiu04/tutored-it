@@ -29,10 +29,13 @@ const Card = (props) => {
 export default function Features() {
   return (
       <Box 
-        backgroundColor="gray.50" 
-        px={'10em'} 
-        py={'12%'}>
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={'5em'}>
+        px={{base: '5%', md: '2%', lg: '8%'}}
+        py={'10%'}
+        backgroundColor='gray.50'
+        borderBottom='1px' 
+        borderBottomColor={'gray.300'}
+        spacing={6} w={'full'} >
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{base: '2rem', md: '1rem', lg: '2rem' }}>
             <Card
               icon={<Icon as={FaChalkboardTeacher} w={10} h={10} />}
               title={'Meet Your Tutor'}
@@ -49,9 +52,9 @@ export default function Features() {
             />
             <Card
               icon={<Icon as={FaMoneyCheckAlt} w={10} h={10} />}
-              title={'Austina will suck ur balli'}
+              title={'Free Courses for All'}
               text={
-                'Blah Blah Blah does not cost money or smth. Keep typing smth random for now.'
+                'Courses are completely free of charge, ensuring learning opportunities are accessible to everyone. Whether you\'re looking to excel in academics, explore new skills, or to enhance creativity, Tutoredit has the right courses for you.'
               }
             />
           </SimpleGrid>

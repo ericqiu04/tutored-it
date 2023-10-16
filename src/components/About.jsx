@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Stack
       minH={'70vh'} >
-
+      
     </Stack>
   )
 }

@@ -3,7 +3,7 @@ import Intro from '../components/Intro'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
 import About from '../components/About'
-import { Divider } from '@chakra-ui/react'
+import Stats from '../components/Stats'
 
 export default function Home() {
   return (  
@@ -11,8 +11,7 @@ export default function Home() {
       <Navbar />
       <Intro />
       <Features />
-      <Divider />
-      <About />
+      <Stats />
       <Footer />
     </>
   )
