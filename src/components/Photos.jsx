@@ -64,7 +64,6 @@ export default function Photos() {
               name={'Ida Luo'}
               title={'Instrutor'}
             />
-
           </SimpleGrid>
       </Container>
     </Box>

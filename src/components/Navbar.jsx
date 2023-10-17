@@ -1,4 +1,5 @@
 import {Box, Flex, Button,  HStack, useColorModeValue, Heading} from '@chakra-ui/react'
+import favicon from '../assets/favicon.ico'
 
 const NavLink = (props) => {
   return (
@@ -40,9 +41,7 @@ export default function Navbar() {
       >
         <HStack>
           <Box>
-            <Heading fontSize="10px" fontWeight="bold">
-              Tutored It
-            </Heading>
+              <img width='40px' src={favicon}/>
           </Box>
         </HStack>
 
