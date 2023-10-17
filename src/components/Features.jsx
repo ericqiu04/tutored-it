@@ -45,14 +45,14 @@ export default function Features() {
             />
             <Card
               icon={<Icon as={FaClock} w={10} h={10} />}
-              title={'Andrew Su'}
+              title={'Tailored For You'}
               text={
                 'Tutors have convenient scheduling options allowing students to book sessions at their preferred time. They will also offer assistance with homework, assignments, and projects across various subjects.'
               }
             />
             <Card
               icon={<Icon as={FaMoneyCheckAlt} w={10} h={10} />}
-              title={'Free Courses for All'}
+              title={'Free Courses'}
               text={
                 'Courses are completely free of charge, ensuring learning opportunities are accessible to everyone. Whether you\'re looking to excel in academics, explore new skills, or to enhance creativity, Tutoredit has the right courses for you.'
               }
