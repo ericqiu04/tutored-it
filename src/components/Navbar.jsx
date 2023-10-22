@@ -53,10 +53,6 @@ export default function Navbar() {
           <Box p="2">
             <NavLink name = "Staff" href="staff"></NavLink>
           </Box>
-
-          <Box p="2">
-          <NavLink name = "Class Photos" href="classes"></NavLink>
-          </Box>
         </HStack>
 
         <HStack>
