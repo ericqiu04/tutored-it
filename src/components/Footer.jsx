@@ -49,10 +49,10 @@ export default function Footer() {
         <Text>© {new Date().getFullYear()} Tutoredit.</Text>
         <Stack direction={'row'} spacing={6}>
           <ContactIcons icon={<BsWechat />} label={'Wechat'} href={'#'}></ContactIcons>
-          <ContactIcons icon={<FaInstagram />} label={'Instagram'} href={'#'}></ContactIcons>
           <ContactIcons icon={<FaDiscord />}label={'Discord'} href={'#'}></ContactIcons>
         </Stack>
       </Container>
     </Box>
   )
 }
+//add later on <ContactIcons icon={<FaInstagram />} label={'Instagram'} href={'#'}></ContactIcons>

@@ -62,7 +62,7 @@ export default function Navbar() {
           color={'blackAlpha.800'}
           colorScheme='blackAlpha'
           >
-          Contact Us
+              <a href = "mailto:tutoredit2023@gmail.com">Contact Us</a>
           </Button>
         </HStack>
         

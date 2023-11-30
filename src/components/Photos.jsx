@@ -98,13 +98,13 @@ export default function Photos() {
                 title={'Founder'}
               />
               <Profile
-                photo={celine}
-                name={'Celine Lai'}
-                title={'Co-Founder'}
+                  photo={eric}
+                  name={'Eric Qiu'}
+                  title={'Founder'}
               />
               <Profile
-                photo={eric}
-                name={'Eric Qiu'}
+                photo={celine}
+                name={'Celine Lai'}
                 title={'Director'}
               />
               <Profile
