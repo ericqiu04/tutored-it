@@ -12,7 +12,7 @@ import favicon from '../assets/favicon.ico';
 const NavLink = (props) => {
   return (
     <Box
-      as="span" // Change 'as' prop to span
+      as="span"
       px={2}
       py={2}
       fontSize={'sm'}
@@ -24,7 +24,7 @@ const NavLink = (props) => {
         color: useColorModeValue('gray.900', 'white'),
       }}
     >
-      <Link href={props.href}>{props.name}</Link> {/* Wrap name in Link component */}
+      <Link href={props.href}>{props.name}</Link> {}
     </Box>
   );
 };

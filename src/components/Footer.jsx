@@ -51,10 +51,7 @@ export default function Footer() {
         <Stack direction={'row'} spacing={6}>
           <ContactIcons icon={<BsWechat />} label={'Wechat'} href={'#'}></ContactIcons>
           <ContactIcons icon={<FaDiscord />} label={'Discord'} href={'#'}></ContactIcons>
-          {/* You can add more icons with Next.js routing here */}
-          {/* <Link href="#">
-              <ContactIcons icon={<FaInstagram />} label={'Instagram'}></ContactIcons>
-          </Link> */}
+          {}
         </Stack>
       </Container>
     </Box>
