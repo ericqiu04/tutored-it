@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Box,
   chakra,
@@ -6,32 +7,32 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-} from '@chakra-ui/react'
-import { FaInstagram, FaDiscord } from 'react-icons/fa'
-import { BsWechat} from 'react-icons/bs'
+} from '@chakra-ui/react';
+import { FaInstagram, FaDiscord } from 'react-icons/fa';
+import { BsWechat } from 'react-icons/bs';
 
 const ContactIcons = (props) => {
   return (
-    <chakra.button
-      bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={props.href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.2s ease'}
-      _hover={{
-        bg: useColorModeValue('blackAlpha.300', 'whiteAlpha.300'),
-      }}>
-      <VisuallyHidden>{props.label}</VisuallyHidden>
+    <Link href={props.href}>
+      <chakra.a
+        bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
+        rounded={'full'}
+        w={8}
+        h={8}
+        cursor={'pointer'}
+        display={'inline-flex'}
+        alignItems={'center'}
+        justifyContent={'center'}
+        transition={'background 0.2s ease'}
+        _hover={{
+          bg: useColorModeValue('blackAlpha.300', 'whiteAlpha.300'),
+        }}>
+        <VisuallyHidden>{props.label}</VisuallyHidden>
         {props.icon}
-    </chakra.button>
-  )
-}
+      </chakra.a>
+    </Link>
+  );
+};
 
 export default function Footer() {
   return (
@@ -49,10 +50,13 @@ export default function Footer() {
         <Text>© {new Date().getFullYear()} Tutoredit.</Text>
         <Stack direction={'row'} spacing={6}>
           <ContactIcons icon={<BsWechat />} label={'Wechat'} href={'#'}></ContactIcons>
-          <ContactIcons icon={<FaDiscord />}label={'Discord'} href={'#'}></ContactIcons>
+          <ContactIcons icon={<FaDiscord />} label={'Discord'} href={'#'}></ContactIcons>
+          {/* You can add more icons with Next.js routing here */}
+          {/* <Link href="#">
+              <ContactIcons icon={<FaInstagram />} label={'Instagram'}></ContactIcons>
+          </Link> */}
         </Stack>
       </Container>
     </Box>
-  )
+  );
 }
-//add later on <ContactIcons icon={<FaInstagram />} label={'Instagram'} href={'#'}></ContactIcons>
