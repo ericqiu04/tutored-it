@@ -1,3 +1,5 @@
+'use client'
+
 import { Container, Grid, GridItem, Flex, Box, Text, Heading } from '@chakra-ui/react'
 import { useEffect, useRef } from 'react';
 import { annotate } from 'rough-notation';
@@ -29,7 +31,7 @@ export default function Stats() {
         }}
         gap={6}>
         <GridItem w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>
-          <Heading px={'10%'} as={'h2'}> In 2023, Tutoredit has</Heading>
+          <Heading px={'10%'} as={'h2'}> In {new Date().getFullYear()}, Tutoredit has</Heading>
         </GridItem>
         <GridItem w="100%">
           <Flex flexDirection={'column'}>

@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client'
+
+import { Link } from '@chakra-ui/next-js'
 import {
   Box,
   chakra,
@@ -12,8 +14,10 @@ import { FaInstagram, FaDiscord } from 'react-icons/fa';
 import { BsWechat } from 'react-icons/bs';
 
 const ContactIcons = (props) => {
+  const IconComponent = props.icon;
+
   return (
-    <Link href={props.href}>
+    <chakra.div>
       <chakra.a
         bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
         rounded={'full'}
@@ -26,11 +30,13 @@ const ContactIcons = (props) => {
         transition={'background 0.2s ease'}
         _hover={{
           bg: useColorModeValue('blackAlpha.300', 'whiteAlpha.300'),
-        }}>
+        }}
+        href={props.href}
+      >
         <VisuallyHidden>{props.label}</VisuallyHidden>
-        {props.icon}
+        <IconComponent />
       </chakra.a>
-    </Link>
+    </chakra.div>
   );
 };
 
@@ -38,7 +44,8 @@ export default function Footer() {
   return (
     <Box
       bg={useColorModeValue('gray.100', 'gray.900')}
-      color={useColorModeValue('gray.900', 'gray.200')}>
+      color={useColorModeValue('gray.900', 'gray.200')}
+    >
       <Container
         as={Stack}
         maxW={'6xl'}
@@ -46,12 +53,12 @@ export default function Footer() {
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
+        align={{ base: 'center', md: 'center' }}
+      >
         <Text>© {new Date().getFullYear()} Tutoredit.</Text>
         <Stack direction={'row'} spacing={6}>
-          <ContactIcons icon={<BsWechat />} label={'Wechat'} href={'#'}></ContactIcons>
-          <ContactIcons icon={<FaDiscord />} label={'Discord'} href={'#'}></ContactIcons>
-          {}
+          <ContactIcons icon={BsWechat} label={'Wechat'} href={'#'} />
+          <ContactIcons icon={FaDiscord} label={'Discord'} href={'#'} />
         </Stack>
       </Container>
     </Box>

@@ -1,3 +1,5 @@
+'use client'
+
 import { Stack } from "@chakra-ui/layout"
 
 export default function About() {

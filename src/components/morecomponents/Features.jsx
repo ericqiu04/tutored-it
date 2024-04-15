@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
 import {FaChalkboardTeacher, FaClock, FaMoneyCheckAlt} from 'react-icons/fa'
 

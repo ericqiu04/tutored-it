@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client'
+
+import { Link } from '@chakra-ui/next-js'
 import {
   Box,
   Flex,
@@ -7,7 +9,6 @@ import {
   useColorModeValue,
   Heading,
 } from '@chakra-ui/react';
-import favicon from '../assets/favicon.ico';
 
 const NavLink = (props) => {
   return (
@@ -48,7 +49,7 @@ export default function Navbar() {
       >
         <HStack>
           <Box>
-            <img width="40px" src={favicon} />
+            {<img width="40px" src={'/favicon.ico'} />}
           </Box>
         </HStack>
 

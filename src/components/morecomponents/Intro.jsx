@@ -1,3 +1,5 @@
+'use client'
+
 import {Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import { useRef } from 'react';
 import { annotate } from 'rough-notation';
